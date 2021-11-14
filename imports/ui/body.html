@@ -1,0 +1,34 @@
+<template name="thebody" style="display: block" class="bg-gray-800 p-5">
+  <!-- HTML that uses RunCSS here. -->
+  <div class="flex bg-gray-200 rounded-lg p-6 h-100"></div>
+  <!-- This code generates all the CSS needed for the webpage. -->
+  <script type="module">
+    import processClasses from "https://unpkg.com/runcss@^0/dist/runcss.modern.js";
+    // Get all elements that have a class attribute.
+    for (const element of document.querySelectorAll("*[class]")) {
+      processClasses(element.className);
+    }
+    // Display elements
+    document.body.style.display = "block";
+  </script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/tailwindcss@^1.5/dist/base.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/tailwindcss@^1.5/dist/components.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/tailwindcss@^1.5/dist/utilities.min.css"
+  />
+</template>
+
+<template name="message">
+  <li>{{text}}</li>
+</template>
