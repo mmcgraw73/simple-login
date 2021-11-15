@@ -1,16 +1,14 @@
 import { Template } from "meteor/templating";
 
-import { login } from "../api/login";
-import { MESSAGES, messages } from "../api/messages";
+import { MESSAGES } from "../api/messages";
 
+import "./body.html";
 import "../ui/login/login.html";
 
-Template.body.helpers({
+Template.bodymover.helpers({
   messages() {
-    return MESSAGES.find({});
+    return MESSAGES.find({}, { sort: { createdAt: -1 } });
   },
 });
 
-var appId = FlowRouter.getParam("appId");
-
-console.log("hey beash i got the id", appId);
+BlazeLayout.render("bodymover", { top: "header", main: "login" });

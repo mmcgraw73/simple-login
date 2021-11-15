@@ -1,0 +1,9 @@
+pages:
+- login 
+- dashboard
+
+components:
+- login
+- header
+- footer 
+- messages
