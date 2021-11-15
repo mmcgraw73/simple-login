@@ -9,4 +9,9 @@ APPLICATION STACK:
 - FLOW ROUTER
 
 
+APPLICATION SCRIPTS:
+
+- Start the Application: `meteor start`
+
+
 
